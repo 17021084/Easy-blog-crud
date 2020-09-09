@@ -1,2 +1,23 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<h1>New Article</h1>
+<%= form_with scope: :article,   # indentify scope for this form  
+
+url: articles_path,   # indetify the url action for this form  . comment this line see in browser what changes
+
+local: true do |form| %>
+  <p>
+
+    <%= articles_path %><br>
+
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
