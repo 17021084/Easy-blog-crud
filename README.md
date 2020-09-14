@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Full command     |  shorts cut  |
+|-----------------|--------------|
+|rails server     |  rails s     |
+|rails console    |  rails c     |
+|rails generate   |  rails g     |
+|rails test       |  rails t     |
+|bundle install   |  bundle      |
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Gerenate static pages
+``` rails g controller <ten controller>```
