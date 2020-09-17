@@ -1,0 +1,2 @@
+class DitMemayController < ApplicationController
+end
