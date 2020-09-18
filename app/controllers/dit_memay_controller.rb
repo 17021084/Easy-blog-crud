@@ -1,2 +1,0 @@
-class DitMemayController < ApplicationController
-end

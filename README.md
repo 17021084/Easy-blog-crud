@@ -23,3 +23,20 @@
 
 * To go all the way back to the beginning, we can use
   ``` $ rails db:migrate VERSION=0 ```
+
+
+# Layouts and embedded Ruby 
+
+
+1 Provive và yeild
+
+ví dụ : 
+``` <% provide(:title, "Home") %> ```và``` <%= yield(:title) %>``` <br>
+
+ta có :
+
+```<% %>``` execute code       <br>
+```<%= %>``` print résult  
+
+
+
