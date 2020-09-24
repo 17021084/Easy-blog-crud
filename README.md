@@ -1,42 +1,24 @@
 # README
 
-|Full command     |  shorts cut  |
-|-----------------|--------------|
-|rails server     |  rails s     |
-|rails console    |  rails c     |
-|rails generate   |  rails g     |
-|rails test       |  rails t     |
-|bundle install   |  bundle      |
+tao model
+``` rails g model colname2:type colname2:type ```
+<br>
+db migrate
+<br>
 
+``` rails db:migrate ```
 
-* Gerenate static pages :<br>
-``` rails g controller <ten controller>```
+<br>
 
+rails console , iteractice ruby
+<br>
 
-* Undoing things  use : ``` rails destroy ```   <br>
-``` rails destroy controller <ten controler>```
+``` rails console --sandbox```
+<br>
 
-
-* We can undo a single migration step using
-```  $ rails db:rollback ```
-
-
-* To go all the way back to the beginning, we can use
-  ``` $ rails db:migrate VERSION=0 ```
-
-
-# Layouts and embedded Ruby 
-
-
-1 Provive và yeild
-
-ví dụ : 
-``` <% provide(:title, "Home") %> ```và``` <%= yield(:title) %>``` <br>
-
-ta có :
-
-```<% %>``` execute code       <br>
-```<%= %>``` print résult  
+tạo biến user =User.new(email: "trung@gmail", name: "trung")
+<br>
+save vao db  user.save
 
 
 

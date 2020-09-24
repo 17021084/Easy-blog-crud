@@ -6,4 +6,5 @@ blank = "       "
 p a*5
 
 p blank.empty?
-p blank.blank?
+
+
