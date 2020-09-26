@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
- 
-  #show the specific id
+  # show the specific id
   def show
     @user = User.find(params[:id])
     # debugger #return nill va co the debug luon o day , debug truc tieo
@@ -17,13 +16,14 @@ class UsersController < ApplicationController
     # @user = User.new(params[:user]) # permitted false neen loi authen ....
     # debugger
     if @user.save
-    # Handle a successful save.
-    render 'new'
+      # Handle a successful save.
+      flash[:success] = "welcome to  the sample app"
+      # redirect_to @user # cach viet ngan cua cai duoi
+      redirect_to user_path @user
     else
       render 'new'
     end
   end
-
 
   private
   def user_params
