@@ -1,35 +1,10 @@
 # README
 
-tao model
-``` rails g model colname2:type colname2:type ```
+tao sessions
+``` rails g controller Sessions new ```
 <br>
-db migrate
-<br>
+Khác với (resouces - Sẽ tạo full routes REST) Thằng này nó chỉ tạo ```Post Get Destroy ```
 
-``` rails db:migrate ```
-
-<br>
-
-rails console , iteractice ruby
-<br>
-
-``` rails console --sandbox```
-<br>
-
-tạo biến user =User.new(email: "trung@gmail", name: "trung")
-<br>
-save vao db  user.save
-
-<br>
-add Một cột vào một bảng
-
-```rails generate migration add_<Tên cột>_to_<Tên bảng số nhiều> <Tên cột>:string ```
-vd 
-```rails generate migration add_password_digest_to_users password_digest:string ```
-<br>
-
-
-Reset database
-``` rails db:migrate:reset ```
-
-
+GET       ```/login```      action : new        ->  page for new sessions  <br>
+CREATE    ```/login```      action : create     ->  Create new sessions  <br>
+Delete    ```/logout```     action : destroy    ->  delete  sessions  <br>
