@@ -19,6 +19,9 @@ class UsersController < ApplicationController
       # Handle a successful save.
       flash[:success] = "welcome to  the sample app"
       # redirect_to @user # cach viet ngan cua cai duoi
+      
+      #automatically login via add sesssion
+      log_in @user
       redirect_to user_path @user
     else
       render 'new'

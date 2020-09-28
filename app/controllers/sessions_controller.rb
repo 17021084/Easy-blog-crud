@@ -6,11 +6,17 @@ class SessionsController < ApplicationController
 
     user = User.find_by(email: params[:session][:email].downcase)
     if user&.authenticate(params[:session][:password])
-        redirect_to user_path user
+      flash[:success] = "Log in successfully"
+      log_in user  # save session for users
+      redirect_to user_path user
     else
+      flash[:danger] = " invalid email or password combination"
       render 'new'
     end
   end
 
-  def destroy; end
+  def destroy
+    log_out
+    redirect_to root_path
+  end
 end
