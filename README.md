@@ -1,23 +1,13 @@
 # README
 
-tao sessions
-``` rails g controller Sessions new ```
+Random string 
+``` urlsafe_base64 method from the SecureRandom ```
 <br>
-Khác với (resouces - Sẽ tạo full routes REST) Thằng này nó chỉ tạo ```Post Get Destroy ```
 
-GET       ```/login```      action : new        ->  page for new sessions  <br>
-CREATE    ```/login```      action : create     ->  Create new sessions  <br>
-Delete    ```/logout```     action : destroy    ->  delete  sessions  <br>
-
+Login : Làm việc mình lưu một cái Session của user và current user
 <br>
-Để compare password ta dung  ``` .authenticate('')```
+Remember me : Làm việc mình lưu một cái token user Ở cookie và trên database
 
 <br>
-Viết logic đăng nhập vào file session helper
+Logout : Mình sẽ xóa Session của user và remember token , currentuser 
 
-<br>
-Đăng nhập có hai nhiệm vụ :
-1. đăng ký session là user_id
-2. tạo current_user
-<br>
-Đăng xuất có hai việc : là xoá 2 cái trên 
