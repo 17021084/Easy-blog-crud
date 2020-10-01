@@ -1,13 +1,30 @@
 # README
 
-Random string 
-``` urlsafe_base64 method from the SecureRandom ```
+reset database : <br>
+```rails db:migrate:reset ``` <br>
+
+faker data via seed file database : <br>
+```rails db:seed ``` <br>
+
+##### Paginate
+Sử dụng 2 gem :  <br>
+``` ruby
+gem 'will_paginate', '~> 3.1.1'
+gem 'will_paginate-bootstrap'  #Use for VIew  (erb)
+```
+
+Truy suất trang 1, 10item/trang
+``` ruby
+User.paginate(page: 1, per_page: 10 )
+```
+
+###### Delete user
+
+Thêm 1 cột vào bảng Users (bảng là số nhiều model là số is) <br>
+``` rails g migration add_admin_to_users admin:boolean ```
 <br>
 
-Login : Làm việc mình lưu một cái Session của user và current user
+nó sẽ tự đông sinh ra 1 file migrate. nhiệm vụ chung ta là migrate nó để thay đổi 
 <br>
-Remember me : Làm việc mình lưu một cái token user Ở cookie và trên database
 
-<br>
-Logout : Mình sẽ xóa Session của user và remember token , currentuser 
-
+``` rails db:migrate ```
