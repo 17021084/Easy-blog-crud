@@ -1,10 +1,21 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  root 'static_pages#home'    # routes localhost:3000/ <=> localhost:3000/static_route/home
+  # refer from short url to native long url
+  get '/home', to: 'static_pages#home'
+  get '/help', to: 'static_pages#help'
+  get '/about', to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
 
-  resources :articles
+  # atomaticlly generate REST url
+  resources :users # resource la so nhieu , model la so it
+
+  # Basic login
+  get '/login', to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+  get '/signup', to: 'users#new'
+
+  resources :account_activations, only: [:edit]
   
-  # default root when start
-  root 'welcome#index'
-
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
